@@ -56,10 +56,10 @@ Restful API Endpoints Food :
 Restful API Endpoints Category
 | Method | Endpoint | Description | Requirement Parameter	| 
 | --- | --- | --- | --- |
-| GET | `/category` | list of categories | `empty`recipe
+| GET | `/category` | list of categories | `empty`
 | GET | `/category/{id}` | Gerecipet a category | `empty`
 | PUT | `/category/{id}` | Update a category | body **json**: `{id:integer,name:string}` 
-| DELETE | `/category/{id}` | Delete a category | `empty`category
+| DELETE | `/category/{id}` | Delete a category | `empty`
 | POST | `/category` | Add category | body **json**: `{name:string}`
 
 Restful API Endpoints Recipe
