@@ -73,11 +73,11 @@ Restful API Endpoints Recipe
 
 Restful API Endpoints Nutrisi
 | Method | Endpoint | Description | Requirement Parameter	| 
-| --- | --- | --- | --- |nutrisi
-| GET | `/nutrisi` | list of nutrisiesnutrisi | `empty`
-| GET | `/nutrisi/{id}` | Get a nutrisinutrisi | `empty`
+| --- | --- | --- | --- |
+| GET | `/nutrisi` | list of nutrisies | `empty`
+| GET | `/nutrisi/{id}` | Get a nutrisi | `empty`
 | PUT | `/nutrisi/{id}` | Update a nutrisi | body **json**: `{id:integer,name:string,kalori:string,protein:string}` 
-| DELETE | `/nutrisi/{id}` | Delete a nutrisinutrisi | `empty`
+| DELETE | `/nutrisi/{id}` | Delete a nutrisi | `empty`
 | POST | `/nutrisi` | Add nutrisi | body **json**: `{name:string,kalori:string}`
 
 
