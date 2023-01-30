@@ -84,6 +84,9 @@ Restful API Endpoints Nutrisi
 ## postman aplication
 use postman to using test rest api in here [**Click here**](https://github.com/FaisalNuridayat/final_project_backend_foodjurnal/blob/main/final%20project.postman_collection.json)
 
+## This aplication Food Jurnal Deployment With Heroku
+you can use link here https://project-food-jurnal.herokuapp.com/ to open aplication Food Jurnal in web server
+
 ## how to use this application, install it on your local computer:
 
 ```
