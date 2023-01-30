@@ -1,7 +1,7 @@
 let express = require('express')
 let moment = require('moment')
 let app = express()
-let port = 3000
+let port = process.env.PORT || 3000
 let bcrypt = require('bcrypt')
 let jwt = require('jsonwebtoken')
 let Validator = require('validatorjs')
