@@ -93,5 +93,6 @@ you can use link here https://project-food-jurnal.herokuapp.com/ to open aplicat
 $ npm init
 $ npm install
 $ install express 
+$ npm start
 ```
 
