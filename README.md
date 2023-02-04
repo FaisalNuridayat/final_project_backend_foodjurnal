@@ -35,6 +35,12 @@ RESTful API Endpoints login :
 | --- | --- | --- | --- |
 | POST | `/login` | to enter the application | body **json**: `{name:string,email:string}`
 
+RESTful API Endpoints Register :
+
+| Method | Endpoint | Description | Requirement Parameter	|
+| --- | --- | --- | --- |
+| POST | `/register` | to add new user the application | body **json**: `{name:string,email:string,password:string}`
+
 Restful API Endpoints User :
 | Method | Endpoint | Description | Requirement Parameter	| 
 | --- | --- | --- | --- |
