@@ -6,6 +6,7 @@ let bcrypt = require('bcrypt')
 let jwt = require('jsonwebtoken')
 let Validator = require('validatorjs')
 let appRoute = require('./routes/index')
+let bodyParser = require('body-parser');
 
 
 let models = require('./models/index')

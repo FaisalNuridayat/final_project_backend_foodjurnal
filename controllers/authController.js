@@ -2,6 +2,8 @@ let models = require('../models/index')
 let jwt    = require('jsonwebtoken')
 let bcrypt = require('bcrypt')
 
+
+
 async function login(req,res) {
     try {
         let result = await models.User.findOne({where: {email: req.body.email}}) 
@@ -28,6 +30,36 @@ async function login(req,res) {
     }
 }
 
+async function register(req, res) {
+    try {
+      const { name, email, password } = req.body;
+  
+      // Cek apakah email sudah digunakan
+      let existingUser = await models.User.findOne({ where: { email } });
+      if (existingUser) {
+        return res.send({ message: 'Email already in use' });
+      }
+  
+      // Hash password menggunakan bcrypt
+      const hashedPassword = await bcrypt.hash(password, 10);
+  
+      // Tambahkan pengguna baru ke database
+      let result = await models.User.create({ name, email, password: hashedPassword });
+  
+      // Buat payload dan token JWT
+      const payload = {
+        id: result.id,
+        name: result.name,
+        email: result.email,
+      };
+      const token = jwt.sign(payload, 'secret');
+  
+      return res.json({ message: 'Registration success', access_token: token });
+    } catch (error) {
+      return res.json(error);
+    }
+  }
+
 module.exports = {
-    login
+    login, register
 }
